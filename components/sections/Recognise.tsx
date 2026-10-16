@@ -18,6 +18,7 @@ export default function Recognise() {
   const cards = recognise.items.map((item, i) => (
     <ArtPanel
       key={item.title}
+      src={item.image}
       variant={variants[i % variants.length]}
       seed={i + 3}
       className={cn("h-[380px] shrink-0 rounded-[22px] md:h-[460px]", widths[i % widths.length])}

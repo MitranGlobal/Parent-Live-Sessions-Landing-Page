@@ -34,9 +34,9 @@ export const announcement = {
  */
 export const images = {
   hero: "",
-  session1: "",
-  session2: "",
-  facilitator: "",
+  session1: "/session-1.png", // 2:1 crop, centre is kept
+  session2: "/session-2.png",
+  facilitator: "/vidyashankar-guru.png", // 16:10
   closing: "",
 };
 
@@ -77,13 +77,15 @@ export const recognise = {
   heading: "If you’ve reminded them a hundred times, you’re not alone.",
   sub:
     "These are the things parents tell us most often. None of them, by itself, means something is wrong with your child.",
+  // image: file in /public. Empty string = gold art.
+  // Card shapes repeat wide (3:2) → tall (4:5) → square-ish.
   items: [
-    { title: "The reminder loop", body: "“I remind, she shouts, I feel terrible, and tomorrow we do it all again.”" },
-    { title: "The phone and the late night", body: "Awake until 2 am, asleep through the morning, angry when the screen goes off." },
-    { title: "Going blank in the exam", body: "“He knew it at home.” And a fear he never mentioned until it was too late." },
-    { title: "“Why should I?”", body: "Gives up the moment it gets hard, or does the bare minimum." },
-    { title: "The closed door", body: "One-word answers at home, a very different child around friends." },
-    { title: "Doing it all alone", body: "One parent carries everything. The other says, “All teens are like this.”" },
+    { title: "The reminder loop", body: "“I remind, she shouts, I feel terrible, and tomorrow we do it all again.”", image: "/familiar-1.png" }, // familiar-1.png · wide
+    { title: "The phone and the late night", body: "Awake until 2 am, asleep through the morning, angry when the screen goes off.", image: "/familiar-2.png" }, // familiar-2.png · tall
+    { title: "Going blank in the exam", body: "“He knew it at home.” And a fear he never mentioned until it was too late.", image: "/familiar-3.png" }, // familiar-3.png · square
+    { title: "“Why should I?”", body: "Gives up the moment it gets hard, or does the bare minimum.", image: "/familiar-4.png" }, // familiar-4.png · wide
+    { title: "The closed door", body: "One-word answers at home, a very different child around friends.", image: "/familiar-5.png" }, // familiar-5.png · tall
+    { title: "Doing it all alone", body: "One parent carries everything. The other says, “All teens are like this.”", image: "/familiar-6.png" }, // familiar-6.png · square
   ],
 };
 

@@ -53,20 +53,22 @@ export default function Agenda() {
                 beams={i === 0}
                 className="aspect-[490/245] w-full self-start rounded-[18px]"
               >
-                {!(i === 0 ? images.session1 : images.session2) && (
-                  <div className="absolute inset-0 flex items-end justify-between p-6 text-ink md:p-7">
-                    <div>
-                      <p className="text-sm uppercase tracking-[0.08em] text-ink/80">{dates[i].w}</p>
-                      <p className="text-[clamp(3.5rem,7vw,5.5rem)] font-semibold leading-none tracking-[-0.06em]">
-                        {dates[i].d}
-                        <span className="ml-2 text-[0.4em] tracking-[-0.02em] text-gold-bright">{dates[i].m}</span>
-                      </p>
-                    </div>
-                    <span className="rounded-full bg-white/15 px-4 py-2 text-sm font-medium backdrop-blur-md">
-                      Session {i + 1} · 7–8:30 pm
-                    </span>
-                  </div>
+                {/* Date overlay always shows; a bottom shade keeps it legible over photos */}
+                {(i === 0 ? images.session1 : images.session2) && (
+                  <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent" />
                 )}
+                <div className="absolute inset-0 flex items-end justify-between p-6 text-ink md:p-7">
+                  <div>
+                    <p className="text-sm uppercase tracking-[0.08em] text-ink/80">{dates[i].w}</p>
+                    <p className="text-[clamp(3.5rem,7vw,5.5rem)] font-semibold leading-none tracking-[-0.06em]">
+                      {dates[i].d}
+                      <span className="ml-2 text-[0.4em] tracking-[-0.02em] text-gold-bright">{dates[i].m}</span>
+                    </p>
+                  </div>
+                  <span className="rounded-full bg-white/15 px-4 py-2 text-sm font-medium backdrop-blur-md">
+                    Session {i + 1} · 7–8:30 pm
+                  </span>
+                </div>
               </ArtPanel>
             </Reveal>
           ))}

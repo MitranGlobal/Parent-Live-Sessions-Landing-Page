@@ -211,20 +211,16 @@ export const faq = {
       a: "Yes. There is no fee for either session. Just register to get your session links.",
     },
     {
-      q: "Can I attend if my teen doesn’t know I’m joining?",
-      a: "Yes. Many parents do. We’ll also share a short way to tell your teen what you learned, without making it about fixing them.",
+      q: "What should I bring or prepare for the session?",
+      a: "Please keep a notebook and pen ready to take notes, ensure you have a stable internet connection, and join from a quiet, distraction-free environment.",
     },
     {
       q: "Do I need to attend both evenings?",
-      a: "No. Each session stands on its own. Both together give the fullest picture.",
+      a: "Yes, it is mandatory to attend both the sessions. There are no recordings available, so kindly attend the live sessions",
     },
     {
       q: "Can my teen and spouse join?",
-      a: "Yes. These sessions are for parents and teens. Bring your spouse along too, or share the toolkit, which has a page for the other parent.",
-    },
-    {
-      q: "Will you tell me what is wrong with my child?",
-      a: "No. These sessions can’t diagnose any child, and it wouldn’t be fair to try. We’ll help you tell ordinary ups and downs from signs that need a doctor or counsellor.",
+      a: "Yes. These sessions are for parents and teens. Bring your spouse along too",
     },
     {
       q: "Is this a course, or tuition?",

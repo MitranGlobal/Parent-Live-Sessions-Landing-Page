@@ -4,8 +4,9 @@
  * Any "Free"/"free" in these strings is automatically shown as a highlighted
  * chip on the page (see components/ui/Free.tsx).
  *
- * Items still wrapped in [square brackets] are unconfirmed — fill them in
- * before going live (search the repo for "[").
+ * Use "free" sparingly — it currently appears in 8 places: top bar, hero
+ * tagline, hero event tile, stats heading, agenda heading, seat price,
+ * one FAQ question and the closing line.
  */
 
 export const REGISTER_URL =
@@ -46,17 +47,16 @@ export const hero = {
   headlineA: "Your teenager says “fine.”",
   headlineB: "What are they not telling you?",
   sub:
-    "Two free live sessions for parents and teens with Vidyashankar Guru on pressure, phones, silence and setbacks, and how to help your child without nagging, fighting or doing it all yourself.",
+    "Two live sessions for parents and teens with Vidyashankar Guru on pressure, phones, silence and setbacks, and how to help your child without nagging, fighting or doing it all yourself.",
   meta: [
     { label: "Dates", value: "Wed 21 & Thu 22 Oct" },
     { label: "Time", value: "7:00–8:30 pm IST" },
-    { label: "Place", value: "Free · Live online" },
+    { label: "Place", value: "Live online" },
   ],
   sessions: [
     { day: "Wed 21 Oct", title: "Beneath “Fine”" },
     { day: "Thu 22 Oct", title: "From managing to supporting" },
   ],
-  priceNote: "Free to attend — no fee for either session · Recording shared with registered families [confirm]",
 };
 
 /* ───────────────────── Stats band ───────────────────── */
@@ -66,8 +66,8 @@ export const statsIntro = {
 };
 
 export const stats = [
-  { value: "2", suffix: "", label: "Free live evenings, each one standing on its own" },
-  { value: "90", suffix: "min", label: "per free session, with your questions answered live" },
+  { value: "2", suffix: "", label: "live evenings, each one standing on its own" },
+  { value: "90", suffix: "min", label: "per session, with your questions answered live" },
   { value: "25k", suffix: "+", label: "teens and professionals trained by Vidyashankar Guru across 40+ nationalities" },
 ];
 
@@ -92,14 +92,14 @@ export const takeaways = {
   eyebrow: "What you take home",
   heading: "You’ll leave with things you can use tonight.",
   sub:
-    "No jargon, no labels for your child, no promises that a teenager will change in a fortnight. Just a clearer picture and small steps — all from two free sessions.",
+    "No jargon, no labels for your child, no promises that a teenager will change in a fortnight. Just a clearer picture and small steps.",
   items: [
     { icon: "question", title: "A better question", body: "than “How was your day?”" },
     { icon: "heart", title: "A response for bad results", body: "that keeps your child talking to you" },
     { icon: "breath", title: "A steadying routine", body: "your child can use before and during exams" },
     { icon: "handover", title: "A handover plan", body: "for one task you can stop reminding about" },
     { icon: "toolkit", title: "A two-page parent toolkit", body: "including a page for the other parent" },
-    { icon: "chat", title: "Your questions answered in a free live session,", body: "and a parent WhatsApp community" },
+    { icon: "chat", title: "Your questions answered live,", body: "and a parent WhatsApp community" },
   ],
 };
 
@@ -108,12 +108,12 @@ export const sessionsIntro = {
   eyebrow: "Agenda",
   heading: "Two free evenings. Two shifts in how you see it.",
   sub:
-    "Each free session for parents and teens is built on real situations families bring to us, with one thing to try the same night.",
+    "Each session for parents and teens is built on real situations families bring to us, with one thing to try the same night.",
 };
 
 export const sessions = [
   {
-    label: "Free Session 1 · Wednesday 21 October",
+    label: "Session 1 · Wednesday 21 October",
     short: "Session 1",
     date: "Wednesday 21 October",
     time: "7:00–8:30 pm IST",
@@ -128,7 +128,7 @@ export const sessions = [
     ],
   },
   {
-    label: "Free Session 2 · Thursday 22 October",
+    label: "Session 2 · Thursday 22 October",
     short: "Session 2",
     date: "Thursday 22 October",
     time: "7:00–8:30 pm IST",
@@ -156,31 +156,30 @@ export const facilitator = {
     "Trained over 25,000 teens and professionals across 40+ nationalities as a TEDx speaker and author of five books.",
     "Today his only mission is giving every struggling teen the tools he wished he had at their age.",
   ],
-  photoNote: "[Add Vidyashankar Guru’s photo]",
+  photoNote: "",
 };
 
 /* ───────────────────── Seat / ticket ───────────────────── */
 export const seat = {
   eyebrow: "Registration",
-  heading: "Save your free seat",
-  sub: "Attend one free evening or both. Each session stands on its own.",
+  heading: "Save your seat",
+  sub: "Attend one evening or both. Each session stands on its own.",
   passName: EVENT_NAME,
-  passSub: "Free live sessions for parents & teens · Wed 21 & Thu 22 October · 7:00–8:30 pm IST",
+  passSub: "Live online sessions for parents & teens · Wed 21 & Thu 22 October · 7:00–8:30 pm IST",
   price: "Free",
   priceNote: "No fee for either session",
   includes: [
-    { title: "Free Session 1 · Beneath “Fine”", body: "Wed 21 Oct · 7:00–8:30 pm IST · Live online" },
-    { title: "Free Session 2 · From managing to supporting", body: "Thu 22 Oct · 7:00–8:30 pm IST · Live online" },
+    { title: "Session 1 · Beneath “Fine”", body: "Wed 21 Oct · 7:00–8:30 pm IST · Live online" },
+    { title: "Session 2 · From managing to supporting", body: "Thu 22 Oct · 7:00–8:30 pm IST · Live online" },
     { title: "Your questions answered live", body: "" },
     { title: "Two-page parent toolkit", body: "Including a page for the other parent." },
     { title: "Parent WhatsApp community", body: "You can leave any time." },
-    { title: "Free session recording", body: "Shared with registered families [confirm]" },
   ],
   privacy:
     "We use your details only to send session links and the toolkit. You can leave the parent WhatsApp community any time. Please don’t share your child’s name or school.",
   secondary: {
     label: "Bringing your teen or spouse?",
-    body: "These free sessions are for parents and teens together. Bring your spouse along too, or share the toolkit, which has a page for the other parent.",
+    body: "These sessions are for parents and teens together. Bring your spouse along too, or share the toolkit, which has a page for the other parent.",
   },
 };
 
@@ -190,7 +189,7 @@ export const faq = {
   items: [
     {
       q: "Is it really free?",
-      a: "Yes. Both live sessions are completely free to attend. Just register to get your session links.",
+      a: "Yes. There is no fee for either session. Just register to get your session links.",
     },
     {
       q: "Can I attend if my teen doesn’t know I’m joining?",
@@ -198,11 +197,11 @@ export const faq = {
     },
     {
       q: "Do I need to attend both evenings?",
-      a: "No. Each free session stands on its own. Both together give the fullest picture.",
+      a: "No. Each session stands on its own. Both together give the fullest picture.",
     },
     {
-      q: "Can my teen and spouse join, or watch later?",
-      a: "Yes. These free sessions are for parents and teens. Bring your spouse along too, or share the toolkit, which has a page for the other parent. [Confirm recording availability]",
+      q: "Can my teen and spouse join?",
+      a: "Yes. These sessions are for parents and teens. Bring your spouse along too, or share the toolkit, which has a page for the other parent.",
     },
     {
       q: "Will you tell me what is wrong with my child?",
@@ -210,7 +209,7 @@ export const faq = {
     },
     {
       q: "Is this a course, or tuition?",
-      a: "Neither. These are two free live sessions for parents and teens. If you want support for your own child afterwards, our team will explain the options. There is no pressure to take any.",
+      a: "Neither. These are two live sessions for parents and teens. If you want support for your own child afterwards, our team will explain the options. There is no pressure to take any.",
     },
   ],
   contactLabel: "Contact us",
@@ -219,23 +218,20 @@ export const faq = {
 
 /* ───────────────────── Closing CTA ───────────────────── */
 export const closing = {
-  heading: "Two free evenings can change how your home talks.",
-  sub: "Taking an evening to understand your child better is already a strong start.",
+  heading: "Two evenings can change how your home talks.",
+  sub: "Both sessions are free. Taking an evening to understand your child better is already a strong start.",
 };
 
 /* ───────────────────── Footer ───────────────────── */
 export const footer = {
   disclaimer:
-    "These free sessions are education for parents and teens, not therapy, and do not diagnose or treat any condition.",
+    "These sessions are education for parents and teens, not therapy, and do not diagnose or treat any condition.",
   safety: [
     { text: "If you are worried about your child’s safety, call", number: "112" },
     { text: "For free mental health support in India, Tele-MANAS is available 24 hours on", number: "14416" },
   ],
-  links: [
-    { label: "[Privacy policy]", url: "#" },
-    { label: "[Terms]", url: "#" },
-    { label: "[Contact]", url: "#" },
-  ],
+  // Add legal links here when the pages exist, e.g. { label: "Privacy policy", url: "https://…" }
+  links: [] as { label: string; url: string }[],
   social: [
     { label: "Spotify", url: "https://open.spotify.com/show/58xhAnoYMVgPTQK0Ea2jmD" },
     { label: "LinkedIn", url: "https://www.linkedin.com/newsletters/mitran-global-positivity-hub-7040456016391507968/" },

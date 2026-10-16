@@ -79,9 +79,6 @@ export default function Hero() {
                 ))}
               </dl>
             </motion.div>
-            <motion.p {...up(0.5)} className="mt-5 text-sm text-ink/70">
-              <F text={hero.priceNote} />
-            </motion.p>
           </div>
 
           {/* Event lock-up tile */}

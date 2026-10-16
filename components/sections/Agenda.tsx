@@ -2,7 +2,7 @@ import { images, sessions, sessionsIntro } from "@/lib/content";
 import Reveal from "@/components/ui/Reveal";
 import ArtPanel from "@/components/ui/ArtPanel";
 import Icon from "@/components/ui/Icon";
-import { F, FreeBadge, FreeMark } from "@/components/ui/Free";
+import { F } from "@/components/ui/Free";
 
 const dates = [
   { d: "21", m: "Oct", w: "Wednesday" },
@@ -28,7 +28,6 @@ export default function Agenda() {
               className="grid gap-6 border-t border-paper-line py-9 last:pb-0 md:py-11 md:last:pb-0 lg:grid-cols-[220px_minmax(0,1fr)_minmax(0,490px)] lg:gap-12"
             >
               <div>
-                <FreeBadge className="mb-3" label="Free · Live" />
                 <p className="text-[32px] font-medium tracking-[-0.04em] text-black/35 md:text-[36px]">{s.short}</p>
                 <p className="mt-1 text-sm uppercase tracking-[0.06em] text-paper-muted">{s.date}</p>
                 <p className="mt-1 text-sm font-semibold uppercase tracking-[0.06em] text-paper-ink">{s.time}</p>
@@ -64,7 +63,7 @@ export default function Agenda() {
                       </p>
                     </div>
                     <span className="rounded-full bg-white/15 px-4 py-2 text-sm font-medium backdrop-blur-md">
-                      <FreeMark>Free</FreeMark> Session {i + 1} · 7–8:30 pm
+                      Session {i + 1} · 7–8:30 pm
                     </span>
                   </div>
                 )}

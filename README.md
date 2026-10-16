@@ -27,14 +27,8 @@ Three.js and Zustand from the main site aren't needed on this page, so they are 
 Any “Free”/“free” in that file is automatically shown as a highlighted chip on the page
 (`components/ui/Free.tsx`) — gold on dark/ivory sections, black on the gold bands.
 
-Before going live, fill in the items the original draft left unconfirmed
-(search the project for `[`):
-
-| Placeholder | Where it shows |
-|---|---|
-| `[confirm]` recording | Hero note, seat card, FAQ |
-| `[Add Vidyashankar Guru’s photo]` | Facilitator panel |
-| `[Privacy policy] · [Terms] · [Contact]` | Footer (`footer.links` → set real URLs) |
+Legal links (Privacy policy, Terms) can be added to `footer.links` once those pages exist —
+the footer shows none until then.
 
 ### Adding photos
 
@@ -56,11 +50,11 @@ export const images = {
 1. Gradient announcement bar + black header (logo · section links · Register now)
 2. Hero — rounded photo card, dot-eyebrow, headline, Register pill + Dates / Place / Time, event lock-up tile
 3. “If you’ve reminded them a hundred times…” — six parent situations on a drifting row of image cards
-4. Black stats band — 2 free evenings · 90 min · 25k+ trained
+4. Black stats band — 2 evenings · 90 min · 25k+ trained
 5. Gold band — six take-home tools
 6. Agenda — Session 1 & 2 rows with day label, outline and date panel
 7. Facilitator — designation, five ✦ points, gold lock-up tile joined to a media panel
-8. Gold band — “Save your FREE seat” pass card with everything included
+8. Gold band — “Save your seat” pass card (price: FREE) with everything included
 9. FAQ accordion + Contact us
 10. Full-bleed closing call to action
 11. Footer — disclaimer, 112 and Tele-MANAS 14416, legal links

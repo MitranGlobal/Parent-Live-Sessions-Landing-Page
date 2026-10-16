@@ -89,6 +89,23 @@ export const recognise = {
   ],
 };
 
+/* ─────────────────── Outcomes (positive mirror of "Sound familiar?") ─────────────────── */
+export const outcomes = {
+  eyebrow: "After the sessions",
+  heading: "What home can start to feel like.",
+  sub:
+    "The same six moments, turned around. Small, practical shifts — one handover, one conversation, one stretch at a time.",
+  // image: file in /public. Empty string = gold art.
+  items: [
+    { title: "Out of the reminder loop", body: "Fewer reminders, more ownership. You hand over one task and step back — no shouting needed.", image: "/outcome-1.png" }, // outcome-1 · wide
+    { title: "A phone and sleep plan that holds", body: "A plan your teen helped write, so nights end earlier and mornings start calmer.", image: "/outcome-2.png" }, // outcome-2 · tall
+    { title: "Steady in the exam hall", body: "A simple routine for before and during exams, so what they know at home shows up on paper.", image: "/outcome-3.png" }, // outcome-3 · square
+    { title: "From “Why should I?” to “Let me try”", body: "Small stretches build real self-belief, so effort doesn’t stop the moment it gets hard.", image: "/outcome-4.png" }, // outcome-4 · wide
+    { title: "The door opens again", body: "Better questions than “How was your day?” — and conversations your teen actually wants to have.", image: "/outcome-5.png" }, // outcome-5 · tall
+    { title: "Parenting as a team", body: "Both parents on the same page, with a toolkit that has a page for the other parent.", image: "/outcome-6.png" }, // outcome-6 · square
+  ],
+};
+
 /* ───────────────────── Takeaways ───────────────────── */
 export const takeaways = {
   eyebrow: "What you take home",

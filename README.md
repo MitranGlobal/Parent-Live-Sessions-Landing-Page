@@ -38,9 +38,9 @@ put the files in `public/` and set the paths in `images` at the top of `lib/cont
 ```ts
 export const images = {
   hero: "/hero.jpg",          // wide, ~2400×1400, subject on the right
-  session1: "/session-1.jpg", // ~980×490
-  session2: "/session-2.jpg",
-  facilitator: "/vidyashankar-guru.jpg", // ~1600×1000
+  session1: "/session-1.png", // ~980×490
+  session2: "/session-2.png",
+  facilitator: "/vidyashankar-guru.png", // 16:10
   closing: "/closing.jpg",    // wide crowd / stage shot
 };
 ```
@@ -49,15 +49,16 @@ export const images = {
 
 1. Gradient announcement bar + black header (logo · section links · Register now)
 2. Hero — rounded photo card, dot-eyebrow, headline, Register pill + Dates / Place / Time, event lock-up tile
-3. “If you’ve reminded them a hundred times…” — six parent situations on a drifting row of image cards
+3. “Sound familiar?” — six parent situations on an always-moving row of image cards
 4. Black stats band — 2 evenings · 90 min · 25k+ trained
-5. Gold band — six take-home tools
-6. Agenda — Session 1 & 2 rows with day label, outline and date panel
-7. Facilitator — designation, five ✦ points, gold lock-up tile joined to a media panel
-8. Gold band — “Save your seat” pass card (price: FREE) with everything included
-9. FAQ accordion + Contact us
-10. Full-bleed closing call to action
-11. Footer — disclaimer, 112 and Tele-MANAS 14416, legal links
+5. “After the sessions” — the same six turned into positive outcomes (row moves the other way)
+6. Gold band — six take-home tools
+7. Agenda — Session 1 & 2 rows with day label, outline and date panel
+8. Facilitator — designation, five ✦ points, gold lock-up tile joined to a media panel
+9. Gold band — “Save your seat” pass card (price: FREE) with everything included
+10. FAQ accordion + Contact us
+11. Full-bleed closing call to action
+12. Footer — disclaimer, 112 and Tele-MANAS 14416, legal links
 
 ## Run locally
 

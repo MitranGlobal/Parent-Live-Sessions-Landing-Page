@@ -63,7 +63,8 @@ const config: Config = {
         paper: "0 1px 0 rgba(255,255,255,0.7) inset, 0 18px 40px -24px rgba(8,9,12,0.25)",
       },
       animation: {
-        marquee: "marquee 38s linear infinite",
+        marquee: "marquee 34s linear infinite",
+        "marquee-reverse": "marquee 34s linear infinite reverse",
         "pulse-dot": "pulseDot 2s ease-in-out infinite",
       },
       keyframes: {

@@ -1,36 +1,14 @@
-"use client";
-
 import { recognise } from "@/lib/content";
-import { cn } from "@/lib/cn";
 import Reveal from "@/components/ui/Reveal";
-import ArtPanel from "@/components/ui/ArtPanel";
+import CardMarquee from "@/components/ui/CardMarquee";
 
 const variants = ["stage", "ember", "spot", "dusk", "sunset", "ember"] as const;
-const widths = ["w-[86vw] sm:w-[560px] lg:w-[720px]", "w-[72vw] sm:w-[360px] lg:w-[380px]", "w-[80vw] sm:w-[480px] lg:w-[540px]"];
 
 /**
- * White section: big heading left, paragraph right, then a row of rounded
- * image cards that bleeds off both edges and drifts slowly sideways.
+ * "Sound familiar?" — the pain points. Heading left, paragraph right,
+ * then an always-moving row of image cards.
  */
 export default function Recognise() {
-  const cards = recognise.items.map((item, i) => (
-    <ArtPanel
-      key={item.title}
-      src={item.image}
-      variant={variants[i % variants.length]}
-      seed={i + 3}
-      className={cn("h-[380px] shrink-0 rounded-[22px] md:h-[460px]", widths[i % widths.length])}
-    >
-      <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent" aria-hidden />
-      <div className="absolute inset-x-0 bottom-0 p-7 md:p-9">
-        <h3 className="text-sm font-medium uppercase tracking-[0.06em] text-gold-bright">{item.title}</h3>
-        <p className="mt-3 max-w-[30ch] text-2xl font-semibold leading-tight tracking-[-0.035em] text-ink md:text-[30px]">
-          {item.body}
-        </p>
-      </div>
-    </ArtPanel>
-  ));
-
   return (
     <section className="overflow-hidden bg-paper py-14 text-paper-ink md:py-20">
       <Reveal className="mx-auto grid w-full max-w-[1800px] gap-8 px-5 md:px-14 lg:grid-cols-2 lg:gap-24">
@@ -41,14 +19,8 @@ export default function Recognise() {
         <p className="max-w-[560px] self-center text-lead text-paper-ink lg:justify-self-end">{recognise.sub}</p>
       </Reveal>
 
-      <div className="mt-10 md:mt-12" aria-label="Situations parents tell us about">
-        {/* Always drifts (slower when the device asks for reduced motion — see globals.css); pauses on hover */}
-        <div className="flex w-max animate-marquee hover:[animation-play-state:paused]">
-          <div className="flex gap-6 pr-6">{cards}</div>
-          <div className="flex gap-6 pr-6" aria-hidden>
-            {cards}
-          </div>
-        </div>
+      <div className="mt-10 md:mt-12">
+        <CardMarquee items={recognise.items} variants={variants} label="Situations parents tell us about" />
       </div>
     </section>
   );

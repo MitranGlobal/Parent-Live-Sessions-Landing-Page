@@ -2,6 +2,7 @@ import Header from "@/components/ui/Header";
 import Hero from "@/components/sections/Hero";
 import Recognise from "@/components/sections/Recognise";
 import Stats from "@/components/sections/Stats";
+import Outcomes from "@/components/sections/Outcomes";
 import Takeaways from "@/components/sections/Takeaways";
 import Agenda from "@/components/sections/Agenda";
 import Facilitator from "@/components/sections/Facilitator";
@@ -19,6 +20,7 @@ export default function Page() {
         <Hero />
         <Recognise />
         <Stats />
+        <Outcomes />
         <Takeaways />
         <Agenda />
         <Facilitator />

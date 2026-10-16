@@ -5,6 +5,7 @@ import { hero, images } from "@/lib/content";
 import RegisterButton from "@/components/ui/RegisterButton";
 import ArtPanel from "@/components/ui/ArtPanel";
 import Lockup from "@/components/ui/Lockup";
+import { F, FreeBadge } from "@/components/ui/Free";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
@@ -22,7 +23,7 @@ export default function Hero() {
   });
 
   return (
-    <section id="top" className="bg-black px-3 pb-3 pt-3 md:px-7 md:pb-7 md:pt-2">
+    <section id="top" className="bg-black px-3 pb-3 pt-3 md:px-7 md:pb-5 md:pt-2">
       <ArtPanel
         src={images.hero}
         variant="sunset"
@@ -48,10 +49,13 @@ export default function Hero() {
           className="absolute inset-0 bg-[linear-gradient(90deg,rgba(8,9,12,0.85)_0%,rgba(8,9,12,0.55)_38%,rgba(8,9,12,0)_70%),linear-gradient(0deg,rgba(8,9,12,0.9)_0%,rgba(8,9,12,0)_55%)]"
         />
 
-        <div className="relative z-10 flex flex-col gap-10 p-6 pt-28 md:p-14 lg:flex-row lg:items-end lg:justify-between">
+        <div className="relative z-10 flex flex-col gap-10 p-6 pt-20 md:p-12 lg:flex-row lg:items-end lg:justify-between">
           <div className="max-w-[1020px] lg:max-w-[min(1020px,calc(100%-330px))]">
             <motion.p {...up(0.05)} className="eyebrow text-ink">
               {hero.eyebrow}
+            </motion.p>
+            <motion.p {...up(0.1)} className="mt-4 text-sm uppercase tracking-[0.06em] text-ink/80 md:text-base">
+              <F text={hero.tagline} />
             </motion.p>
 
             <motion.h1 {...up(0.15)} className="mt-5 text-display-hero text-ink">
@@ -61,7 +65,7 @@ export default function Hero() {
             </motion.h1>
 
             <motion.p {...up(0.28)} className="mt-6 max-w-[720px] text-lead text-ink/90">
-              {hero.sub}
+              <F text={hero.sub} />
             </motion.p>
 
             <motion.div {...up(0.4)} className="mt-9 flex flex-col gap-7 md:flex-row md:items-end md:gap-14">
@@ -70,13 +74,13 @@ export default function Hero() {
                 {hero.meta.map((m) => (
                   <div key={m.label}>
                     <dt className="text-sm uppercase tracking-[0.04em] text-ink/70 md:text-[17px]">{m.label}</dt>
-                    <dd className="mt-1 text-lg font-medium tracking-[-0.02em] text-ink md:text-[26px]">{m.value}</dd>
+                    <dd className="mt-1 text-lg font-medium tracking-[-0.02em] text-ink md:text-[26px]"><F text={m.value} /></dd>
                   </div>
                 ))}
               </dl>
             </motion.div>
-            <motion.p {...up(0.5)} className="mt-5 text-sm text-ink/60">
-              {hero.priceNote}
+            <motion.p {...up(0.5)} className="mt-5 text-sm text-ink/70">
+              <F text={hero.priceNote} />
             </motion.p>
           </div>
 
@@ -88,6 +92,7 @@ export default function Hero() {
             className="hidden shrink-0 rounded-[18px] bg-black px-10 py-10 shadow-[0_30px_80px_-30px_rgba(0,0,0,0.9)] md:block"
           >
             <Lockup size="sm" className="w-[220px]" />
+            <div className="mt-5 flex justify-center"><FreeBadge label="Free · Live online" /></div>
             <ul className="mt-7 space-y-2 border-t border-white/10 pt-5 text-[13px] text-ink/75">
               {hero.sessions.map((s) => (
                 <li key={s.day}>

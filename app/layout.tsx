@@ -7,9 +7,9 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-sans", display: "swa
 // Condensed caps for the event lock-up tile only.
 const oswald = Oswald({ subsets: ["latin"], weight: ["600", "700"], variable: "--font-lockup", display: "swap" });
 
-const title = "Live Sessions for Parents of Teens | MiTran Global";
+const title = "Imparting Positivity Masterclass — Free Live Sessions for Parents & Teens | MiTran Global";
 const description =
-  "Your teenager says “fine.” What are they not telling you? Two live online evenings with Vidyashankar Guru on pressure, phones, silence and setbacks — Wed 21 & Thu 22 Oct.";
+  "Your teenager says “fine.” What are they not telling you? Two free live online sessions for parents and teens with Vidyashankar Guru — Wed 21 & Thu 22 Oct, 7–8:30 pm IST.";
 
 export const metadata: Metadata = {
   title,

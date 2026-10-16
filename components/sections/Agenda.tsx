@@ -2,6 +2,7 @@ import { images, sessions, sessionsIntro } from "@/lib/content";
 import Reveal from "@/components/ui/Reveal";
 import ArtPanel from "@/components/ui/ArtPanel";
 import Icon from "@/components/ui/Icon";
+import { F, FreeBadge, FreeMark } from "@/components/ui/Free";
 
 const dates = [
   { d: "21", m: "Oct", w: "Wednesday" },
@@ -12,23 +13,25 @@ const dates = [
  *  (grey day label · title + text · rounded image). */
 export default function Agenda() {
   return (
-    <section id="sessions" className="bg-paper py-24 text-paper-ink md:py-36">
+    <section id="sessions" className="bg-paper py-14 text-paper-ink md:py-20">
       <div className="mx-auto max-w-[1800px] px-5 md:px-14">
         <Reveal>
           <p className="eyebrow">{sessionsIntro.eyebrow}</p>
-          <h2 className="mt-7 max-w-[20ch] text-display-1">{sessionsIntro.heading}</h2>
-          <p className="mt-7 max-w-[56ch] text-lead text-paper-muted">{sessionsIntro.sub}</p>
+          <h2 className="mt-7 max-w-[20ch] text-display-1"><F text={sessionsIntro.heading} /></h2>
+          <p className="mt-7 max-w-[56ch] text-lead text-paper-muted"><F text={sessionsIntro.sub} /></p>
         </Reveal>
 
-        <div className="mt-14 md:mt-20">
+        <div className="mt-10 md:mt-12">
           {sessions.map((s, i) => (
             <Reveal
               key={s.title}
-              className="grid gap-6 border-t border-paper-line py-12 md:py-16 lg:grid-cols-[220px_minmax(0,1fr)_minmax(0,490px)] lg:gap-12"
+              className="grid gap-6 border-t border-paper-line py-9 last:pb-0 md:py-11 md:last:pb-0 lg:grid-cols-[220px_minmax(0,1fr)_minmax(0,490px)] lg:gap-12"
             >
               <div>
+                <FreeBadge className="mb-3" label="Free · Live" />
                 <p className="text-[32px] font-medium tracking-[-0.04em] text-black/35 md:text-[36px]">{s.short}</p>
-                <p className="mt-1 text-sm uppercase tracking-[0.06em] text-paper-muted">{s.label.split(" · ")[1]}</p>
+                <p className="mt-1 text-sm uppercase tracking-[0.06em] text-paper-muted">{s.date}</p>
+                <p className="mt-1 text-sm font-semibold uppercase tracking-[0.06em] text-paper-ink">{s.time}</p>
               </div>
 
               <div className="max-w-[640px]">
@@ -61,7 +64,7 @@ export default function Agenda() {
                       </p>
                     </div>
                     <span className="rounded-full bg-white/15 px-4 py-2 text-sm font-medium backdrop-blur-md">
-                      Session {i + 1} · 90 min
+                      <FreeMark>Free</FreeMark> Session {i + 1} · 7–8:30 pm
                     </span>
                   </div>
                 )}

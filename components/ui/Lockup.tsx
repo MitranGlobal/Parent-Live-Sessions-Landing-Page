@@ -24,15 +24,15 @@ export default function Lockup({
         tone === "dark" ? "text-ink" : "text-paper-ink",
         className
       )}
-      aria-label="MiTran Global — Beneath Fine — Parent Live Sessions"
+      aria-label="MiTran Global — Imparting Positivity Masterclass"
       role="img"
     >
       <span className={cn("font-sans font-semibold tracking-[0.22em]", top)}>MiTran Global</span>
-      <span className={cn("mt-3 font-lockup font-bold tracking-[0.01em]", big)}>Beneath</span>
+      <span className={cn("mt-3 font-lockup font-bold tracking-[0.01em]", big)}>Imparting</span>
       <span className={cn("font-lockup font-bold tracking-[0.01em]", big, tone === "dark" && "gold-text")}>
-        “Fine”
+        Positivity
       </span>
-      <span className={cn("mt-2 font-sans font-black tracking-[-0.01em]", mid)}>Parent Live Sessions</span>
+      <span className={cn("mt-1 font-sans font-black tracking-[-0.01em]", mid)}>Masterclass</span>
     </div>
   );
 }

@@ -5,6 +5,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { cn } from "@/lib/cn";
 import { LOGO_WHITE, REGISTER_URL, announcement, brand } from "@/lib/content";
 import RegisterButton from "./RegisterButton";
+import { F } from "./Free";
 
 const links = [
   { label: "Sessions", href: "#sessions" },
@@ -31,11 +32,11 @@ export default function Header() {
       {/* Announcement bar */}
       <a
         href={REGISTER_URL}
-        className="announce block px-4 py-2.5 text-center text-[13px] font-medium uppercase tracking-[0.02em] text-black transition-[filter] hover:brightness-105 md:text-[15px]"
+        className="announce block truncate px-4 py-2.5 text-center text-[13px] font-medium uppercase tracking-[0.02em] text-black transition-[filter] hover:brightness-105 md:text-[15px]"
       >
         <span aria-hidden className="mr-2">🔥</span>
-        <span className="sm:hidden">{announcement.split(" · ").slice(0, 2).join(" · ")}</span>
-        <span className="hidden sm:inline">{announcement}</span>
+        <span className="sm:hidden"><F text={announcement.short} tone="dark" /></span>
+        <span className="hidden sm:inline"><F text={announcement.long} tone="dark" /></span>
         <span className="ml-2 hidden underline underline-offset-4 sm:inline">{brand.ctaLabel}</span>
       </a>
 
@@ -55,12 +56,6 @@ export default function Header() {
           </nav>
 
           <div className="flex items-center gap-5 md:gap-8">
-            <a
-              href={brand.loginUrl}
-              className="hidden text-[17px] font-medium text-ink transition-colors hover:text-gold sm:inline"
-            >
-              {brand.loginLabel}
-            </a>
             <RegisterButton size="md" className="px-5 py-2.5 text-[15px] md:px-6 md:py-3.5 md:text-[17px]" />
             <button
               type="button"
@@ -98,9 +93,6 @@ export default function Header() {
                     {l.label}
                   </a>
                 ))}
-                <a href={brand.loginUrl} className="py-4 text-xl font-medium text-ink-muted sm:hidden">
-                  {brand.loginLabel}
-                </a>
               </div>
             </motion.nav>
           )}

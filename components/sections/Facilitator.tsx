@@ -11,7 +11,7 @@ import RegisterButton from "@/components/ui/RegisterButton";
  */
 export default function Facilitator() {
   return (
-    <section id="facilitator" className="bg-paper pb-24 pt-6 text-paper-ink md:pb-36 md:pt-10">
+    <section id="facilitator" className="bg-paper pb-14 pt-4 text-paper-ink md:pb-20 md:pt-6">
       <div className="mx-auto max-w-[1800px] px-5 md:px-14">
         <Reveal className="relative grid lg:grid-cols-[minmax(0,600px)_minmax(0,1fr)]">
           {/* Lock-up tile */}
@@ -20,16 +20,23 @@ export default function Facilitator() {
           </div>
 
           {/* Heading */}
-          <div className="flex flex-col justify-center py-10 lg:py-0 lg:pl-14">
+          <div className="flex flex-col justify-center py-8 lg:py-0 lg:pl-14">
             <p className="eyebrow">{facilitator.eyebrow}</p>
             <h2 className="mt-5 text-display-1">{facilitator.name}</h2>
+            <p className="mt-4 text-lg font-semibold tracking-[-0.02em] text-gold-deep md:text-2xl">{facilitator.designation}</p>
           </div>
 
           {/* Copy */}
-          <div className="order-last pt-10 lg:order-none lg:pr-14 lg:pt-20">
-            <p className="max-w-[30ch] text-lead text-paper-ink">{facilitator.bio}</p>
-            <p className="mt-5 text-sm text-paper-muted">{facilitator.credentials}</p>
-            <RegisterButton variant="dark" size="md" className="mt-10 px-8 py-4" />
+          <div className="order-last pt-8 lg:order-none lg:pr-14 lg:pt-10">
+            <ul className="space-y-5">
+              {facilitator.points.map((pt) => (
+                <li key={pt} className="flex gap-4 text-lg leading-relaxed text-paper-ink">
+                  <span aria-hidden className="mt-[0.1em] text-xl leading-none text-gold-deep">✦</span>
+                  <span>{pt}</span>
+                </li>
+              ))}
+            </ul>
+            <RegisterButton variant="dark" size="md" className="mt-9 px-8 py-4" />
           </div>
 
           {/* Media panel + fillets that join it to the tile */}
@@ -66,7 +73,7 @@ export default function Facilitator() {
               )}
               <span className="absolute bottom-5 left-1/2 inline-flex w-max max-w-[calc(100%-2rem)] -translate-x-1/2 items-center gap-3 rounded-full bg-black/35 px-5 py-3 text-sm font-medium md:px-6 md:py-3.5 md:text-base text-ink backdrop-blur-md md:bottom-8 md:text-lg">
                 <span className="h-2 w-2 shrink-0 rounded-full bg-gold" aria-hidden />
-                {facilitator.name} · Founder, MiTran Global
+                {facilitator.name} · Co-founder & Chief Vision Officer
               </span>
             </ArtPanel>
           </div>

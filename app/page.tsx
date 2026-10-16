@@ -8,7 +8,6 @@ import Facilitator from "@/components/sections/Facilitator";
 import Seat from "@/components/sections/Seat";
 import Faq from "@/components/sections/Faq";
 import Closing from "@/components/sections/Closing";
-import More from "@/components/sections/More";
 import Footer from "@/components/sections/Footer";
 
 export default function Page() {
@@ -26,7 +25,6 @@ export default function Page() {
         <Seat />
         <Faq />
         <Closing />
-        <More />
       </main>
       <Footer />
     </>

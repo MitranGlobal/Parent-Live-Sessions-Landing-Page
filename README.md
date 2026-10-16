@@ -1,13 +1,13 @@
-# MiTran Global — Parent Live Sessions landing page
+# MiTran Global — Imparting Positivity Masterclass
 
-A standalone one-page site for **“Live Sessions for Parents of Teens”**
-(Session 1 · *Beneath “Fine”* — Wed 21 Oct · Session 2 · *From managing to supporting* — Thu 22 Oct).
+A standalone one-page site for the **free** live masterclass for parents and teens
+(Session 1 · *Beneath “Fine”* — Wed 21 Oct · Session 2 · *From managing to supporting* — Thu 22 Oct · 7:00–8:30 pm IST).
 
 Every **Register now** button (header, announcement bar, hero, benefits, facilitator,
 seat card, closing band — 7 in total) goes to the MiTran Hub checkout:
 
 ```
-https://hub.mitranglobal.com/web/checkout/6acf55d0740ba37d96e6ba0f
+https://hub.mitranglobal.com/web/checkout/6ad08e49c82e4f4c430ae073
 ```
 
 ## Stack (same as MiTranGlobalPage)
@@ -24,15 +24,15 @@ Three.js and Zustand from the main site aren't needed on this page, so they are 
 
 **All copy, dates and links live in one file: `lib/content.ts`.**
 
+Any “Free”/“free” in that file is automatically shown as a highlighted chip on the page
+(`components/ui/Free.tsx`) — gold on dark/ivory sections, black on the gold bands.
+
 Before going live, fill in the items the original draft left unconfirmed
 (search the project for `[`):
 
 | Placeholder | Where it shows |
 |---|---|
-| `[SESSION TIME]` | Hero “Time”, seat card |
-| `[Free / fee: confirm]`, `[Confirm: free / fee]` | Hero note, seat card price, FAQ |
 | `[confirm]` recording | Hero note, seat card, FAQ |
-| `[Add only verified credentials and affiliations]` | Facilitator |
 | `[Add Vidyashankar Guru’s photo]` | Facilitator panel |
 | `[Privacy policy] · [Terms] · [Contact]` | Footer (`footer.links` → set real URLs) |
 
@@ -53,18 +53,17 @@ export const images = {
 
 ## Page structure
 
-1. Gradient announcement bar + black header (logo · section links · Log in · Register now)
+1. Gradient announcement bar + black header (logo · section links · Register now)
 2. Hero — rounded photo card, dot-eyebrow, headline, Register pill + Dates / Place / Time, event lock-up tile
 3. “If you’ve reminded them a hundred times…” — six parent situations on a drifting row of image cards
-4. Black stats band — 2 evenings · 90 min · 20 yrs
+4. Black stats band — 2 free evenings · 90 min · 25k+ trained
 5. Gold band — six take-home tools
 6. Agenda — Session 1 & 2 rows with day label, outline and date panel
-7. Facilitator — gold lock-up tile joined to a media panel
-8. Gold band — “Save your seat” pass card with everything included
+7. Facilitator — designation, five ✦ points, gold lock-up tile joined to a media panel
+8. Gold band — “Save your FREE seat” pass card with everything included
 9. FAQ accordion + Contact us
 10. Full-bleed closing call to action
-11. More from MiTran Global (podcast, newsletter, e-book, posters, Positivity Score)
-12. Footer — disclaimer, 112 and Tele-MANAS 14416, legal links
+11. Footer — disclaimer, 112 and Tele-MANAS 14416, legal links
 
 ## Run locally
 
@@ -82,7 +81,7 @@ From inside this folder:
 ```bash
 git init
 git add .
-git commit -m "Parent Live Sessions landing page"
+git commit -m "Imparting Positivity Masterclass landing page"
 git branch -M main
 
 # Create an empty repo on GitHub first, e.g. MitranGlobal/parent-live-sessions, then:

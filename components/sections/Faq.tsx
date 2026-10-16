@@ -5,18 +5,19 @@ import { faq } from "@/lib/content";
 import { cn } from "@/lib/cn";
 import Reveal from "@/components/ui/Reveal";
 import Icon from "@/components/ui/Icon";
+import { F } from "@/components/ui/Free";
 
 /** White FAQ: heading + "Contact us" pill on the left, hairline accordion on the right. */
 export default function Faq() {
   const [open, setOpen] = useState<number | null>(0);
 
   return (
-    <section id="faq" className="bg-paper py-24 text-paper-ink md:py-36">
+    <section id="faq" className="bg-paper py-14 text-paper-ink md:py-20">
       <div className="mx-auto grid max-w-[1800px] gap-12 px-5 md:px-14 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.4fr)] lg:gap-24">
         <Reveal>
           <p className="eyebrow">FAQ</p>
-          <h2 className="mt-6 max-w-[12ch] text-display-2">{faq.heading}</h2>
-          <a href={faq.contactUrl} className="btn-soft btn-md mt-10 px-8 py-4">
+          <h2 className="mt-6 max-w-[12ch] text-display-2"><F text={faq.heading} /></h2>
+          <a href={faq.contactUrl} className="btn-soft btn-md mt-8 px-8 py-4">
             {faq.contactLabel}
           </a>
         </Reveal>
@@ -33,9 +34,9 @@ export default function Faq() {
                     aria-expanded={isOpen}
                     aria-controls={id}
                     onClick={() => setOpen(isOpen ? null : i)}
-                    className="flex w-full items-center justify-between gap-6 py-7 text-left text-xl font-semibold tracking-[-0.03em] md:py-8 md:text-[26px]"
+                    className="flex w-full items-center justify-between gap-6 py-5 text-left text-xl font-semibold tracking-[-0.03em] md:py-6 md:text-[26px]"
                   >
-                    {item.q}
+                    <span><F text={item.q} /></span>
                     <span
                       className={cn(
                         "grid h-11 w-11 shrink-0 place-items-center rounded-full border border-paper-line transition-all duration-300",
@@ -57,7 +58,7 @@ export default function Faq() {
                   )}
                 >
                   <div className="overflow-hidden">
-                    <p className="max-w-[62ch] pb-8 text-lg leading-relaxed text-paper-muted md:text-xl">{item.a}</p>
+                    <p className="max-w-[62ch] pb-6 text-lg leading-relaxed text-paper-muted md:text-xl"><F text={item.a} /></p>
                   </div>
                 </div>
               </li>

@@ -123,4 +123,8 @@
     animation-duration: 0.01ms !important;
     transition-duration: 0.01ms !important;
   }
+  /* Keep the "Sound familiar?" row drifting, just slower */
+  .animate-marquee {
+    animation-duration: 80s !important;
+  }
 }

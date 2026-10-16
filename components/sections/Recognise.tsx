@@ -1,6 +1,5 @@
 "use client";
 
-import { useReducedMotion } from "framer-motion";
 import { recognise } from "@/lib/content";
 import { cn } from "@/lib/cn";
 import Reveal from "@/components/ui/Reveal";
@@ -14,7 +13,6 @@ const widths = ["w-[86vw] sm:w-[560px] lg:w-[720px]", "w-[72vw] sm:w-[360px] lg:
  * image cards that bleeds off both edges and drifts slowly sideways.
  */
 export default function Recognise() {
-  const reduce = useReducedMotion();
   const cards = recognise.items.map((item, i) => (
     <ArtPanel
       key={item.title}
@@ -44,16 +42,13 @@ export default function Recognise() {
       </Reveal>
 
       <div className="mt-10 md:mt-12" aria-label="Situations parents tell us about">
-        {reduce ? (
-          <div className="no-scrollbar flex gap-6 overflow-x-auto px-5 md:px-14">{cards}</div>
-        ) : (
-          <div className="flex w-max animate-marquee hover:[animation-play-state:paused]">
-            <div className="flex gap-6 pr-6">{cards}</div>
-            <div className="flex gap-6 pr-6" aria-hidden>
-              {cards}
-            </div>
+        {/* Always drifts (slower when the device asks for reduced motion — see globals.css); pauses on hover */}
+        <div className="flex w-max animate-marquee hover:[animation-play-state:paused]">
+          <div className="flex gap-6 pr-6">{cards}</div>
+          <div className="flex gap-6 pr-6" aria-hidden>
+            {cards}
           </div>
-        )}
+        </div>
       </div>
     </section>
   );

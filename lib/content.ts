@@ -231,29 +231,12 @@ export const faq = {
       a: "Neither. These are two live sessions for parents and teens. If you want support for your own child afterwards, our team will explain the options. There is no pressure to take any.",
     },
   ],
-  contactLabel: "Contact us",
-  contactUrl: "https://calendly.com/mitranglobal/one-to-one-session-on-facing-exams",
 };
 
-/* ───────────────────── Closing CTA ───────────────────── */
+/* ───────────────────── Closing CTA (also the page footer) ───────────────────── */
 export const closing = {
   heading: "Two evenings can change how your home talks.",
   sub: "Both sessions are free. Taking an evening to understand your child better is already a strong start.",
-};
-
-/* ───────────────────── Footer ───────────────────── */
-export const footer = {
   disclaimer:
     "These sessions are education for parents and teens, not therapy, and do not diagnose or treat any condition.",
-  safety: [
-    { text: "If you are worried about your child’s safety, call", number: "112" },
-    { text: "For free mental health support in India, Tele-MANAS is available 24 hours on", number: "14416" },
-  ],
-  // Add legal links here when the pages exist, e.g. { label: "Privacy policy", url: "https://…" }
-  links: [] as { label: string; url: string }[],
-  social: [
-    { label: "Spotify", url: "https://open.spotify.com/show/58xhAnoYMVgPTQK0Ea2jmD" },
-    { label: "LinkedIn", url: "https://www.linkedin.com/newsletters/mitran-global-positivity-hub-7040456016391507968/" },
-    { label: "WhatsApp", url: "https://chat.whatsapp.com/JxY3FynELhu0oE8C2nHcP1" },
-  ],
 };

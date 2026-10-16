@@ -4,7 +4,7 @@ A standalone one-page site for the **free** live masterclass for parents and tee
 (Session 1 · *Beneath “Fine”* — Wed 21 Oct · Session 2 · *From managing to supporting* — Thu 22 Oct · 7:00–8:30 pm IST).
 
 Every **Register now** button (header, announcement bar, hero, benefits, facilitator,
-seat card, closing band — 7 in total) goes to the MiTran Hub checkout:
+seat card, closing footer — 7 in total) goes to the MiTran Hub checkout:
 
 ```
 https://hub.mitranglobal.com/web/checkout/6ad08e49c82e4f4c430ae073
@@ -26,9 +26,6 @@ Three.js and Zustand from the main site aren't needed on this page, so they are 
 
 Any “Free”/“free” in that file is automatically shown as a highlighted chip on the page
 (`components/ui/Free.tsx`) — gold on dark/ivory sections, black on the gold bands.
-
-Legal links (Privacy policy, Terms) can be added to `footer.links` once those pages exist —
-the footer shows none until then.
 
 ### Adding photos
 
@@ -56,9 +53,8 @@ export const images = {
 7. Agenda — Session 1 & 2 rows with day label, outline and date panel
 8. Facilitator — designation, five ✦ points, gold lock-up tile joined to a media panel
 9. Gold band — “Save your seat” pass card (price: FREE) with everything included
-10. FAQ accordion + Contact us
-11. Full-bleed closing call to action
-12. Footer — disclaimer, 112 and Tele-MANAS 14416, legal links
+10. FAQ accordion
+11. Closing call to action that doubles as the footer — headline, Register now, MiTran logo, disclaimer, copyright
 
 ## Run locally
 

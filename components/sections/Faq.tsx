@@ -7,7 +7,7 @@ import Reveal from "@/components/ui/Reveal";
 import Icon from "@/components/ui/Icon";
 import { F } from "@/components/ui/Free";
 
-/** White FAQ: heading + "Contact us" pill on the left, hairline accordion on the right. */
+/** White FAQ: heading on the left, hairline accordion on the right. */
 export default function Faq() {
   const [open, setOpen] = useState<number | null>(0);
 
@@ -17,9 +17,6 @@ export default function Faq() {
         <Reveal>
           <p className="eyebrow">FAQ</p>
           <h2 className="mt-6 max-w-[12ch] text-display-2"><F text={faq.heading} /></h2>
-          <a href={faq.contactUrl} className="btn-soft btn-md mt-8 px-8 py-4">
-            {faq.contactLabel}
-          </a>
         </Reveal>
 
         <Reveal as="ul" className="border-b border-paper-line">

@@ -9,7 +9,6 @@ import Facilitator from "@/components/sections/Facilitator";
 import Seat from "@/components/sections/Seat";
 import Faq from "@/components/sections/Faq";
 import Closing from "@/components/sections/Closing";
-import Footer from "@/components/sections/Footer";
 
 export default function Page() {
   return (
@@ -26,9 +25,9 @@ export default function Page() {
         <Facilitator />
         <Seat />
         <Faq />
-        <Closing />
       </main>
-      <Footer />
+      {/* Closing call to action doubles as the page footer */}
+      <Closing />
     </>
   );
 }

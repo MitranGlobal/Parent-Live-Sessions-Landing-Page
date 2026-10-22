@@ -24,8 +24,8 @@ export const brand = {
 
 /* Top announcement bar */
 export const announcement = {
-  short: "Free live masterclass · 21 & 22 Oct",
-  long: "Free live online masterclass · Wed 21 & Thu 22 Oct · 7–8:30 pm IST · For parents & teens",
+  short: "Free live masterclass · 13 & 14 Nov",
+  long: "Free live online masterclass · Fri 13 & Sat 14 Nov · 7–8:30 pm IST · For parents & teens",
 };
 
 /**
@@ -49,13 +49,13 @@ export const hero = {
   sub:
     "Two live sessions for parents and teens with Vidyashankar Guru on pressure, phones, silence and setbacks, and how to help your child without nagging, fighting or doing it all yourself.",
   meta: [
-    { label: "Dates", value: "Wed 21 & Thu 22 Oct" },
+    { label: "Dates", value: "Fri 13 & Sat 14 Nov" },
     { label: "Time", value: "7:00–8:30 pm IST" },
     { label: "Place", value: "Live online" },
   ],
   sessions: [
-    { day: "Wed 21 Oct", title: "Beneath “Fine”" },
-    { day: "Thu 22 Oct", title: "From managing to supporting" },
+    { day: "Fri 13 Nov", title: "Beneath “Fine”" },
+    { day: "Sat 14 Nov", title: "From managing to supporting" },
   ],
 };
 
@@ -132,9 +132,9 @@ export const sessionsIntro = {
 
 export const sessions = [
   {
-    label: "Session 1 · Wednesday 21 October",
+    label: "Session 1 · Friday 13 November",
     short: "Session 1",
-    date: "Wednesday 21 October",
+    date: "Friday 13 November",
     time: "7:00–8:30 pm IST",
     title: "Beneath “Fine”",
     question: "What is really going on with my teenager?",
@@ -147,9 +147,9 @@ export const sessions = [
     ],
   },
   {
-    label: "Session 2 · Thursday 22 October",
+    label: "Session 2 · Saturday 14 November",
     short: "Session 2",
-    date: "Thursday 22 October",
+    date: "Saturday 14 November",
     time: "7:00–8:30 pm IST",
     title: "From managing to supporting",
     question: "How do I help without doing it all myself?",
@@ -184,12 +184,12 @@ export const seat = {
   heading: "Save your seat",
   sub: "Attend one evening or both. Each session stands on its own.",
   passName: EVENT_NAME,
-  passSub: "Live online sessions for parents & teens · Wed 21 & Thu 22 October · 7:00–8:30 pm IST",
+  passSub: "Live online sessions for parents & teens · Fri 13 & Sat 14 November · 7:00–8:30 pm IST",
   price: "Free",
   priceNote: "No fee for either session",
   includes: [
-    { title: "Session 1 · Beneath “Fine”", body: "Wed 21 Oct · 7:00–8:30 pm IST · Live online" },
-    { title: "Session 2 · From managing to supporting", body: "Thu 22 Oct · 7:00–8:30 pm IST · Live online" },
+    { title: "Session 1 · Beneath “Fine”", body: "Fri 13 Nov · 7:00–8:30 pm IST · Live online" },
+    { title: "Session 2 · From managing to supporting", body: "Sat 14 Nov · 7:00–8:30 pm IST · Live online" },
     { title: "Your questions answered live", body: "" },
     { title: "Two-page parent toolkit", body: "Including a page for the other parent." },
     { title: "Parent WhatsApp community", body: "You can leave any time." },

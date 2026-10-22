@@ -9,7 +9,7 @@ const oswald = Oswald({ subsets: ["latin"], weight: ["600", "700"], variable: "-
 
 const title = "Imparting Positivity Masterclass — Free Live Sessions for Parents & Teens | MiTran Global";
 const description =
-  "Your teenager says “fine.” What are they not telling you? Two free live online sessions for parents and teens with Vidyashankar Guru — Wed 21 & Thu 22 Oct, 7–8:30 pm IST.";
+  "Your teenager says “fine.” What are they not telling you? Two free live online sessions for parents and teens with Vidyashankar Guru — Fri 13 & Sat 14 Nov, 7–8:30 pm IST.";
 
 export const metadata: Metadata = {
   title,

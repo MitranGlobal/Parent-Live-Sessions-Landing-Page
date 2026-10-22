@@ -5,8 +5,8 @@ import Icon from "@/components/ui/Icon";
 import { F } from "@/components/ui/Free";
 
 const dates = [
-  { d: "21", m: "Oct", w: "Wednesday" },
-  { d: "22", m: "Oct", w: "Thursday" },
+  { d: "13", m: "Nov", w: "Friday" },
+  { d: "14", m: "Nov", w: "Saturday" },
 ];
 
 /** White agenda: "● AGENDA", huge heading, then hairline-separated rows

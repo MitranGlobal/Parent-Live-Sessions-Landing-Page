@@ -1,7 +1,7 @@
 # MiTran Global — Imparting Positivity Masterclass
 
 A standalone one-page site for the **free** live masterclass for parents and teens
-(Session 1 · *Beneath “Fine”* — Wed 21 Oct · Session 2 · *From managing to supporting* — Thu 22 Oct · 7:00–8:30 pm IST).
+(Session 1 · *Beneath “Fine”* — Fri 13 Nov · Session 2 · *From managing to supporting* — Sat 14 Nov · 7:00–8:30 pm IST).
 
 Every **Register now** button (header, announcement bar, hero, benefits, facilitator,
 seat card, closing footer — 7 in total) goes to the MiTran Hub checkout:

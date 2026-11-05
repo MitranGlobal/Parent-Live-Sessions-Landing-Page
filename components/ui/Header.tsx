@@ -3,12 +3,12 @@
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { cn } from "@/lib/cn";
-import { LOGO_WHITE, REGISTER_URL, announcement, brand } from "@/lib/content";
+import { LOGO_WHITE, REGISTER_URL, announcement, brand, event } from "@/lib/content";
 import RegisterButton from "./RegisterButton";
 import { F } from "./Free";
 
 const links = [
-  { label: "Sessions", href: "#sessions" },
+  { label: event.navAgendaLabel, href: "#sessions" },
   { label: "What you get", href: "#takeaways" },
   { label: "Facilitator", href: "#facilitator" },
   { label: "Register", href: "#seat" },

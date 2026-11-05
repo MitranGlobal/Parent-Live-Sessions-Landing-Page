@@ -54,6 +54,7 @@ export default function ArtPanel({
   seed = 1,
   beams = false,
   className,
+  position,
   children,
 }: {
   src?: string;
@@ -62,13 +63,15 @@ export default function ArtPanel({
   seed?: number;
   beams?: boolean;
   className?: string;
+  /** CSS object-position for the photo, e.g. "50% 20%" (lower % = image sits lower, showing more of its top) */
+  position?: string;
   children?: React.ReactNode;
 }) {
   return (
     <div className={cn("relative overflow-hidden bg-bg", className)}>
       {src ? (
         // eslint-disable-next-line @next/next/no-img-element
-        <img src={src} alt={alt} className="absolute inset-0 h-full w-full object-cover" />
+        <img src={src} alt={alt} className="absolute inset-0 h-full w-full object-cover" style={position ? { objectPosition: position } : undefined} />
       ) : (
         <div className="absolute inset-0" style={{ background: looks[variant] }} aria-hidden>
           {beams && <div className="beams absolute inset-0" />}

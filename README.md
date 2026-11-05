@@ -1,7 +1,7 @@
 # MiTran Global — Imparting Positivity Masterclass
 
 A standalone one-page site for the **free** live masterclass for parents and teens
-(Session 1 · *Beneath “Fine”* — Fri 13 Nov · Session 2 · *From managing to supporting* — Sat 14 Nov · 7:00–8:30 pm IST).
+(currently one evening — Fri 13 Nov 2026, 7:00–8:30 pm IST — in two parts: *Beneath “Fine”* and *From managing to supporting*).
 
 Every **Register now** button (header, announcement bar, hero, benefits, facilitator,
 seat card, closing footer — 7 in total) goes to the MiTran Hub checkout:
@@ -19,6 +19,22 @@ https://hub.mitranglobal.com/web/checkout/6ad08e49c82e4f4c430ae073
 - **next/font** — Inter (all text) + Oswald (event lock-up only)
 
 Three.js and Zustand from the main site aren't needed on this page, so they are left out.
+
+## One-day or two-day event
+
+The page supports both formats. Open `lib/content.ts` and change one word near the top:
+
+```ts
+export const EVENT_FORMAT = "one-day" as EventFormat;   // or "two-day"
+```
+
+- **one-day** — one evening in two parts. The agenda shows a single date banner made from both
+  agenda photos (Part 1 / Part 2), then the two parts side by side.
+- **two-day** — two evenings. The agenda shows one row per evening, each with its own dated photo.
+
+Each format keeps its own dates and wording in the `ONE_DAY` and `TWO_DAY` blocks just below the
+switch (top bar, hero, agenda, registration card, FAQ, closing line, Google description). Update
+the dates in the block you are switching to, then push.
 
 ## Editing content
 

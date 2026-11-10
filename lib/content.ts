@@ -12,7 +12,7 @@
  */
 
 export const REGISTER_URL =
-  "https://hub.mitranglobal.com/web/checkout/6ad08e49c82e4f4c430ae073";
+  "https://hub.mitranglobal.com/web/checkout/6aed769c37e24ae81be618e5";
 
 export const LOGO_WHITE =
   "https://res.cloudinary.com/twteccae/image/upload/Logo_White_szjcqg.svg";

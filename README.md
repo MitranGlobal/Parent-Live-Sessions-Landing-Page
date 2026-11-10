@@ -7,7 +7,7 @@ Every **Register now** button (header, announcement bar, hero, benefits, facilit
 seat card, closing footer — 7 in total) goes to the MiTran Hub checkout:
 
 ```
-https://hub.mitranglobal.com/web/checkout/6ad08e49c82e4f4c430ae073
+https://hub.mitranglobal.com/web/checkout/6aed769c37e24ae81be618e5
 ```
 
 ## Stack (same as MiTranGlobalPage)
